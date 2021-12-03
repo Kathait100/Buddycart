@@ -1,0 +1,28 @@
+#Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+#Navbar nav ul {
+  display: flex;
+  list-style: none;
+}
+#Navbar nav ul li {
+  margin-right: 50px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+#buddy {
+  color: #f37112;
+  font-weight: 600;
+}
+#cart {
+  font-size: 28px;
+}
+#default {
+  background-color: #f37112;
+}

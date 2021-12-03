@@ -1,0 +1,25 @@
+#section {
+  font-family: "Poppins", sans-serif;
+  margin-left: 50px;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#inner-section-1 {
+  font-weight: 700;
+  font-size: 25px;
+}
+#inner-section-2 span {
+  background-color: #f37112;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.section-2 img {
+  margin-right: 50px;
+  width: 400px;
+  height: 250px;
+  border-radius: 70px;
+}
