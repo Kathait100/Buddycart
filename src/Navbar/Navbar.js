@@ -1,19 +1,55 @@
-import React from 'react';
-import './Navbar.css';
+import React, { useEffect, useState } from "react";
+import "./Navbar.css";
+import { Link, useParams } from "react-router-dom";
 const Navbar = () => {
-    return (
-    <div id ="Navbar">
-      <h2><span id ="buddy">Buddy</span><span id = "cart">Cart</span>.in</h2>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>My Buddies</li>
-            <li>Explore</li>
-            <li id = "default">Login</li>
-          </ul>
-        </nav>
-    </div>
-    )
-}
+  const { id } = useParams();
+  const [path, setPath] = useState("");
+  useEffect(() => {
+    setPath(window.location.pathname);
+  }, [path]);
 
-export default Navbar
+  return (
+    <div id="Navbar">
+      <h2 id="logo">
+        <span id="buddy">Buddy</span>
+        <span id="cart">Cart.in</span>
+      </h2>
+      <nav className="navigation">
+        <ul>
+          <li>
+            <Link to="/home" className={path === "/home" ? "active" : "link"}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/dashboard"
+              className={path === "/dashboard" ? "active" : "link "}
+            >
+              Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/explore"
+              className={
+                path === "/explore" || path === `/explore/cart${id}`
+                  ? "active"
+                  : "link "
+              }
+            >
+              Explore
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className={path === "/about" ? "active" : "link"}>
+              About Us
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;

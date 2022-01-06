@@ -1,0 +1,128 @@
+.Explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+.title {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  font-size: 25px;
+  margin-top: 80px;
+}
+
+#explore {
+  color: #e36039;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+#around {
+  color: #656565;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.input {
+  width: 280px;
+  padding: 8px;
+  margin-top: 8px;
+  margin-right: 5px;
+  border-radius: 8px;
+  border: 1px solid #656565;
+  outline: 0;
+}
+.search {
+  padding: 8px 13px;
+  background-color: #e36039;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: 0;
+  font-weight: 700;
+  border: 1px solid #e36039;
+}
+#category-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  margin-left: 50px;
+  color: #e36039;
+  font-weight: 700;
+}
+.AddCartById {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.sellercard {
+  height: 220px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border: 1px solid #e3e3e3;
+}
+.card {
+  height: 220px;
+  width: 180px;
+  border: 1px solid #e3e3e3;
+}
+.top {
+  border-bottom: 1px solid #e3e3e3;
+  height: 180px;
+}
+.text {
+  display: flex;
+  margin-left: 10px;
+  color: #e36039;
+  margin-top: 5px;
+  font-weight: 700;
+}
+nav {
+  position: relative;
+}
+
+.active {
+  color: #656565;
+  text-decoration: none;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  background-color: #e36039;
+  height: 3px;
+  width: 80%;
+  bottom: -10px;
+  left: 0;
+  transition: all 2s ease 0.5;
+}
+
+.sellerlink {
+  text-decoration: none;
+  color: #e36039;
+}
+.seller-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.notfound {
+  padding: 0 450px;
+  width:400px;
+  /* display: flex;
+  justify-content: center; */
+}

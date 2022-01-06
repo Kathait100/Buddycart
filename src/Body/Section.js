@@ -6,8 +6,8 @@ const Section = () => {
         <div id = "section">
           <div id ="section-1">
             <div id ="inner-section-1">
-                <h1>Want Your Local</h1>
-                <h1> Street Food?</h1>
+                <span className ="inner-content">Want Your Local</span><br/>
+                <span className ="inner-content"> Street Food?</span>
             </div>
                
             <div id = "inner-section-2">

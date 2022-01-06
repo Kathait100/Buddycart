@@ -2,7 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 50px;
+  padding-left: 55px;
+  position: fixed;
+  background-color: #ffffff;
+  top: 0px;
+}
+.navigation {
+  left: 360px;
+  background-color: #ffffff;
 }
 #Navbar nav ul {
   display: flex;
@@ -16,13 +23,17 @@
   font-weight: 700;
   font-size: 20px;
 }
-#buddy {
-  color: #f37112;
-  font-weight: 600;
+
+.link {
+  text-decoration: none;
+  color: #656565;
 }
-#cart {
-  font-size: 28px;
+h2 #buddy {
+  color: #e36039;
+  font-weight: 700;
+  font-size: 25px;
 }
-#default {
-  background-color: #f37112;
+h2 #cart {
+  font-size: 27px;
+  color: #656565;
 }
