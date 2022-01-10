@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { PushpinFilled } from "@ant-design/icons";
 import { StarOutlined, StarFilled } from "@ant-design/icons";
 import "./FoodCartMenu.css";
@@ -7,21 +7,14 @@ import cartempty from "../../Assets/cartempty.png";
 import Navbar from "../../Navbar/Navbar";
 import Data from "../../data";
 import { ItemList } from "../../context/itemstate";
-import Login from "../../Modals/Login";
-import Signup from "../../Modals/Signup";
-// import { Product } from "../../context/product";
+// import Login from "../../Modals/Login";
+// import Signup from "../../Modals/Signup";
+
 const CartMenu = () => {
-  const {
-    state,
-    shop,
-    setShopItem,
-    setTotal,
-    setBill,
-    Bill,
-    Total,
-    isLoggedIn,
-  } = ItemList();
-  const [temp, setIsTemp] = useState(false);
+  const { state, shop, setShopItem, setTotal, setBill, Bill, Total } =
+    ItemList();
+  const [temp] = useState(false); //, setIsTemp
+
   const [search, setSearch] = useState("");
   const [press, setPress] = useState(true);
   const { id } = useParams();
@@ -317,9 +310,11 @@ const CartMenu = () => {
                     </button>
                   </div>
                 ))}
-                <span className="subtotal">SubTotal: ${Bill}</span>
+
+                <h3 className="subtotal">SubTotal: ${Bill}</h3>
+
                 <br />
-                <button
+                {/* <button
                   onClick={
                     // alert("Payment Gateway") isLoggedIn, setIsLoggedIn temp, setIsTemp
                     () => setIsTemp(!temp)
@@ -327,18 +322,23 @@ const CartMenu = () => {
                   className="payment"
                 >
                   CHECKOUT
-                </button>
+                </button> */}
+                <div className="pcontainer">
+                  <Link to="/payment" className="pbtn">
+                    Payment
+                  </Link>
+                </div>
               </div>
             )}
           </div>
         </div>
       ))}
-      <div
+      {/* <div
         className={temp ? "bg" : "normal"}
         onClick={() => setIsTemp(!temp)}
-      ></div>
+      ></div> */}
       {/* onClick={() => setIsLoggedIn(!isLoggedIn)} */}
-      {temp && (isLoggedIn ? <Signup /> : <Login />)}
+      {/* {temp && (isLoggedIn ? <Signup /> : <Login />)} */}
       {}
     </div>
   );

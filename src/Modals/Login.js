@@ -1,10 +1,44 @@
 import "./Login.css";
-import { ItemList } from "../context/itemstate";
+
+import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 const Login = () => {
-  const { isLoggedIn, setIsLoggedIn } = ItemList();
-  // console.log(form);
+  const Loggedin = () => {
+    const form = document.querySelector("form");
+    const emailError = document.querySelector(".email.error");
+    const passwordError = document.querySelector(".password.error");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = form.email.value;
+      const password = form.password.value;
+      try {
+        const newSignup = await fetch("/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+        const data = await newSignup.json();
+        if (data.error) {
+          emailError.textContent = data.error.email;
+          emailError.style.color = "red";
+          passwordError.textContent = data.error.password;
+          passwordError.style.color = "red";
+        }
+        if (!data.error) {
+          alert("Payment Successfull");
+          window.location.assign("/home");
+          console.log(data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  };
   return (
     <div>
+      <Navbar />
       <div className="LoginModal">
         <form>
           <div className="login">
@@ -13,30 +47,29 @@ const Login = () => {
               <h3 className="link label">Your Email</h3>
               <input
                 type="email"
+                name="email"
                 className="input label"
                 placeholder="youremail@gmail.com"
               />
-              <div class="email error"></div>
+              <div className="email error"></div>
             </div>
             <div className="password">
               <h3 className="link label">Password</h3>
               <input
                 type="password"
+                name="password"
                 className="input"
                 placeholder="123456789"
               />
-              <div class="password error"></div>
+              <div className="password error"></div>
             </div>
-            <button className="search btn">Sign In</button>
+            <button className="search btn" onClick={() => Loggedin()}>
+              Sign In
+            </button>
           </div>
         </form>
         <div className="signup1">
-          <button
-            onClick={() => setIsLoggedIn(!isLoggedIn)}
-            className="signupbtn"
-          >
-            Signup
-          </button>
+          <Link to="/signup">Sign Up</Link>
         </div>
       </div>
     </div>
