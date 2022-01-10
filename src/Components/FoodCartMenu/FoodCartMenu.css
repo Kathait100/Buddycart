@@ -45,10 +45,14 @@
   flex-direction: column;
   margin-top: 0px;
 }
+
+.menu1 {
+  position: fixed;
+}
 .dishnotavailable {
-  padding-left:200px;
-  padding-top:100px;
-  width:400px;
+  padding-left: 200px;
+  padding-top: 100px;
+  width: 400px;
 }
 .addtocart {
   flex: 25%;
@@ -56,6 +60,70 @@
   top: 125px;
   right: 0px;
 }
+/* ................... */
+.addtocart1 {
+  flex: 25%;
+  position: fixed;
+  top: 125px;
+  right: 0px;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 400px;
+  box-shadow: -5px 4px 7px 0px rgba(101, 101, 101, 0.79);
+  -webkit-box-shadow: -5px 4px 7px 0px rgba(101, 101, 101, 0.79);
+  -moz-box-shadow: -5px 4px 7px 0px rgba(101, 101, 101, 0.79);
+}
+
+.cancel {
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 10%;
+  outline: 0px;
+  color: #ffffff;
+  background-color: #e36039;
+  border: 1px solid #e36039;
+}
+
+.intotal {
+  margin-left: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #656565;
+}
+.cartitems {
+  margin-bottom: 8px;
+}
+.btn {
+  background-color: #656565;
+  color: #ffffff;
+  outline: 0px;
+  border: 1px solid #e36039;
+  border-radius: 10%;
+}
+.subtotal {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+.qty {
+  margin: 0px 5px;
+  font-weight: 700;
+}
+.payment {
+  padding: 8px 15px;
+  background-color: #e36039;
+  outline: 0px;
+  border: 1px solid #e36039;
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 4px;
+  width: 200px;
+}
+.item-name {
+  font-size: 20px;
+  font-weight: 400;
+}
+/* ............... */
 .frame {
   display: flex;
   margin-top: 20px;
