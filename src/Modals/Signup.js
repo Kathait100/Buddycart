@@ -16,7 +16,7 @@ const Signup = () => {
       const password = form.password.value;
       console.log(email, password);
       try {
-        const newSignup = await fetch("/signup", {
+        const newSignup = await fetch("https://authrestapi1.herokuapp.com/signup", {
           method: "POST",
           credentials: "include",
           headers: {
