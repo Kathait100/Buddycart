@@ -18,7 +18,6 @@ const Signup = () => {
       try {
         const newSignup = await fetch("https://authrestapi1.herokuapp.com/signup", {
           method: "POST",
-          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },
