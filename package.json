@@ -1,7 +1,7 @@
 {
   "name": "bookcart",
   "version": "0.1.0",
-  "proxy":"http://localhost:8080",
+  "proxy":"https://authrestapi1.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
