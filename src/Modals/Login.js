@@ -12,7 +12,7 @@ const Login = () => {
       const email = form.email.value;
       const password = form.password.value;
       try {
-        const newSignup = await fetch("/login", {
+        const newSignup = await fetch("https://authrestapi1.herokuapp.com/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
